@@ -1,71 +1,98 @@
-body{
-margin: 0;
-font-family: sans-serif;
-background-color: #e5e5e5;
-color: #333;
-}
+body {
 
-.contenedor{
-display: grid;
+    margin: 0;
 
-grid-template-columns: 1fr 4fr;
-grid-template-rows: auto 1fr auto;
+    font-family: sans-serif;
 
-grid-template-areas:
-    "a a"
-    "b c"
-    "d d";
+    background-color: #e5e5e5;
 
-gap: 10px;
-padding: 10px;
+    color: #333;
 
 }
 
+.contenedor {
 
-.a{
-grid-area: a;
-background-color: #a50044;
+    display: grid;
 
-display: flex;
-justify-content: space-between;
-align-items: center;
+    grid-template-columns: 1fr 4fr;
 
-border: 4px solid #004d98;
-border-radius: 10px;
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+
+        "a a"
+
+        "b c"
+
+        "d d";
+
+    gap: 10px;
+
+    padding: 10px;
 
 }
 
 
-.b{
-grid-area: b;
-background-color: #004d98;
+.a {
 
-border: 4px solid #a50044;
-border-radius: 10px;
+    grid-area: a;
+
+    background-color: #9bb8f7;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border: 4px solid #9aa9bd;
+
+    border-radius: 10px;
 
 }
 
 
-.c{
-grid-area: c;
-background-color: #f2f2f2;
+.b {
 
-border: 4px solid #004d98;
-border-radius: 10px;
+    grid-area: b;
+
+    background-color: #9bb8f7;
+
+    border: 4px solid #9aa9bd;
+
+    border-radius: 10px;
 
 }
 
-.d{
-grid-area: d;
 
-display: flex;
-justify-content: space-around;
-align-items: center;
+.c {
 
-background-color: #f2f2f2;
+    grid-area: c;
 
-border: 4px solid #a50044;
-border-radius: 10px;
+    background-color: #f2f2f2;
+
+    border: 4px solid #9aa9bd;
+
+    border-radius: 10px;
+
+}
+
+
+.d {
+
+    grid-area: d;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    background-color: #9bb8f7;
+
+    border: 4px solid #9aa9bd;
+
+    border-radius: 10px;
 
 }
 
@@ -73,48 +100,113 @@ border-radius: 10px;
 .a,
 .b,
 .c,
-.d{
-padding: 15px;
+.d {
+
+    padding: 15px;
+
+}
+
+
+.a h1 {
+
+    color: #333;
+
+}
+
+
+.b h2 {
+
+    color: #333;
+
+}
+
+
+.b a {
+
+    color: #333;
+
+    text-decoration: none;
+
+}
+
+
+.b a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+.d a {
+
+    color: #333;
+
+    text-decoration: none;
+
+}
+
+
+.d a:hover {
+
+    text-decoration: underline;
+
 }
 
 
 .c h2,
-.c h3{
-display: inline-block;
-border-bottom: 3px solid #a50044;
-padding-bottom: 5px;
-margin-bottom: 15px;
-}
+.c h3 {
 
+    display: inline-block;
 
-.c img{
-max-width: 100%;
-height: auto;
+    border-bottom: 3px solid #9aa9bd;
 
-border: 5px solid #004d98;
-border-radius: 10px;
-padding: 4px;
+    padding-bottom: 5px;
 
-box-sizing: border-box;
+    margin-bottom: 15px;
 
 }
 
 
-.c > img{
-float: right;
-margin-left: 20px;
-margin-bottom: 15px;
+.c img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    border: 5px solid #9aa9bd;
+
+    border-radius: 10px;
+
+    padding: 4px;
+
+    box-sizing: border-box;
+
 }
 
 
-.c img.argentina{
-border: 6px solid #75aadb;
-background-color: white;
-box-shadow: 0 0 0 3px #f6c945;
+.c > img {
+
+    float: right;
+
+    margin-left: 20px;
+
+    margin-bottom: 15px;
+
 }
 
-/* TÍTULOS DE ARGENTINA */
 
-.argentina-titulo{
-border-bottom-color: #75aadb !important;
+.c img.argentina {
+
+    border: 6px solid #75aadb;
+
+    background-color: white;
+
+    box-shadow: 0 0 0 3px #f6c945;
+
+}
+
+.argentina-titulo {
+
+    border-bottom-color: #75aadb !important;
+
 }
