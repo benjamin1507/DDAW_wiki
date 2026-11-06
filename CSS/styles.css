@@ -106,3 +106,22 @@ body.oscuro .d {
 body.oscuro a {
     color: #8ab4f8;
 }
+
+/* tamaño del texto */
+.texto-pequeno {
+    font-size: 14px;
+}
+
+.texto-estandar {
+    font-size: 16px;
+}
+
+.texto-grande {
+    font-size: 19px;
+}
+
+/* botón seleccionado */
+.activo {
+    background-color: #245b91;
+    color: white;
+}
