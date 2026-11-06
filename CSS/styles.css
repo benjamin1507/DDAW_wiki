@@ -1,3 +1,4 @@
+
 /* configuración general */
 body {
     font-family: sans-serif;
@@ -124,4 +125,44 @@ body.oscuro a {
 .activo {
     background-color: #245b91;
     color: white;
+}
+
+/* secciones plegables */
+.oculto {
+    display: none;
+}
+
+.c h2 {
+    cursor: pointer;
+}
+
+/* formulario de discusión */
+#formulario-comentarios {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#formulario-comentarios input,
+#formulario-comentarios textarea {
+    padding: 8px;
+}
+
+/* campos con errores */
+.error {
+    border: 2px solid #A23B2C;
+}
+
+/* mensaje de validación */
+#mensaje {
+    color: #A23B2C;
+}
+
+/* comentarios publicados */
+#lista-comentarios li {
+    margin-bottom: 10px;
+}
+
+.plegado .contenido-seccion {
+    display: none;
 }
