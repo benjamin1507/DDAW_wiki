@@ -7,6 +7,7 @@
     <title>Benja Wiki - Barcelona</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="icon" type="image/png" href="imagen/benjawiki.png">
+    <script src="JS/main.js" defer></script>
 </head>
 
 <body>
@@ -22,12 +23,17 @@
 
             <h2>Índice</h2>
 
-            <ul>
-                <li><a href="#introduccion">Introducción</a></li>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#estadio">Estadio</a></li>
-                <li><a href="#referencias">Referencias</a></li>
-            </ul>
+            <ul id="indice"></ul>
+
+            <h2>Apariencia</h2>
+
+            <button id="modo-oscuro" type="button">Modo oscuro</button>
+
+            <div class="botones-texto">
+                <button id="pequeno" type="button">Pequeño</button>
+                <button id="estandar" type="button">Estándar</button>
+                <button id="grande" type="button">Grande</button>
+            </div>
 
         </aside>
 
@@ -37,16 +43,17 @@
 
             <img src="imagen/descarga.jpg" alt="FC Barcelona" width="350">
 
-            <h2>Datos rápidos</h2>
+            <section>
+                <h2 id="datos">Datos rápidos</h2>
 
-            <p><strong>Nombre:</strong> Fútbol Club Barcelona</p>
-            <p><strong>Fundación:</strong> 29 de noviembre de 1899</p>
-            <p><strong>Ciudad:</strong> Barcelona, España</p>
-            <p><strong>Estadio:</strong> Camp Nou</p>
+                <p><strong>Nombre:</strong> Fútbol Club Barcelona</p>
+                <p><strong>Fundación:</strong> 29 de noviembre de 1899</p>
+                <p><strong>Ciudad:</strong> Barcelona, España</p>
+                <p><strong>Estadio:</strong> Camp Nou</p>
+            </section>
 
-            <section id="introduccion">
-
-                <h2>Introducción</h2>
+            <section>
+                <h2 id="introduccion">Introducción</h2>
 
                 <p>
                     El Fútbol Club Barcelona (en catalán: Futbol Club Barcelona), conocido popularmente como Barça, es una entidad polideportiva con sede en Barcelona (España). Fue fundado como club de fútbol el 29 de noviembre de 1899 y registrado oficialmente el 5 de enero de 1903.
@@ -59,12 +66,10 @@
                 <p>
                     A nivel institucional es uno de los cuatro clubes profesionales de fútbol del país cuya entidad jurídica no es la de sociedad anónima deportiva (S. A. D.), ya que su propiedad recae en sus socios. También participa en la máxima categoría de la Liga Nacional de Fútbol Profesional desde su establecimiento en 1929.
                 </p>
-
             </section>
 
-            <section id="historia">
-
-                <h2>Historia</h2>
+            <section>
+                <h2 id="historia">Historia</h2>
 
                 <p>
                     El Fútbol Club Barcelona fue fundado el 29 de noviembre de 1899 por un grupo de doce aficionados al fútbol, convocados por el suizo Hans Gamper mediante un anuncio publicado en la revista Los Deportes el 22 de octubre del mismo año.
@@ -89,12 +94,10 @@
                 <p>
                     En aquellos años fue cuando se popularizó el apelativo de «culés» referente a los aficionados del club.
                 </p>
-
             </section>
 
-            <section id="estadio">
-
-                <h2>Estadio</h2>
+            <section>
+                <h2 id="estadio">Estadio</h2>
 
                 <p>
                     El estadio del F. C. Barcelona es el Camp Nou, propiedad del propio club. Inaugurado en 1957, tenía una capacidad de 99.354 espectadores, todos sentados, hasta 2023.
@@ -123,7 +126,28 @@
                 <p>
                     Su primer estadio fue el ex Velódromo de la Bonanova en el año 1899. Luego utilizó el Campo del Hotel Casanovas, la plaza de las Armas, la carretera de Horta, la calle Muntaner y el Campo de la Fuxarda antes de pasar al Campo de la calle Industria.
                 </p>
+            </section>
 
+            <section>
+                <h2 id="discusion">Discusión</h2>
+
+                <form id="formulario-comentarios">
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" maxlength="200"></textarea>
+
+                    <p id="contador">0 / 200</p>
+
+                    <button type="submit">Enviar comentario</button>
+
+                </form>
+
+                <p id="mensaje"></p>
+
+                <ul id="lista-comentarios"></ul>
             </section>
 
         </main>

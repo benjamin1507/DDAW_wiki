@@ -1,212 +1,108 @@
+/* configuración general */
 body {
-
-    margin: 0;
-
     font-family: sans-serif;
-
     background-color: #e5e5e5;
-
     color: #333;
-
+    margin: 0;
 }
 
+/* distribución de la página */
 .contenedor {
-
     display: grid;
-
     grid-template-columns: 1fr 4fr;
-
     grid-template-rows: auto 1fr auto;
-
     grid-template-areas:
-
         "a a"
-
         "b c"
-
         "d d";
-
     gap: 10px;
-
     padding: 10px;
-
 }
 
-
+/* encabezado */
 .a {
-
     grid-area: a;
-
-    background-color: #9bb8f7;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    border: 4px solid #9aa9bd;
-
-    border-radius: 10px;
-
-}
-
-
-.b {
-
-    grid-area: b;
-
-    background-color: #9bb8f7;
-
-    border: 4px solid #9aa9bd;
-
-    border-radius: 10px;
-
-}
-
-
-.c {
-
-    grid-area: c;
-
-    background-color: #f2f2f2;
-
-    border: 4px solid #9aa9bd;
-
-    border-radius: 10px;
-
-}
-
-
-.d {
-
-    grid-area: d;
-
-    display: flex;
-
-    justify-content: space-around;
-
-    align-items: center;
-
-    background-color: #9bb8f7;
-
-    border: 4px solid #9aa9bd;
-
-    border-radius: 10px;
-
-}
-
-
-.a,
-.b,
-.c,
-.d {
-
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 15px;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-.a h1 {
-
-    color: #333;
-
+/* menú lateral */
+.b {
+    grid-area: b;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
 }
 
-
-.b h2 {
-
-    color: #333;
-
+/* contenido principal */
+.c {
+    grid-area: c;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
 }
-
-
-.b a {
-
-    color: #333;
-
-    text-decoration: none;
-
-}
-
-
-.b a:hover {
-
-    text-decoration: underline;
-
-}
-
-
-.d a {
-
-    color: #333;
-
-    text-decoration: none;
-
-}
-
-
-.d a:hover {
-
-    text-decoration: underline;
-
-}
-
 
 .c h2,
 .c h3 {
-
-    display: inline-block;
-
-    border-bottom: 3px solid #9aa9bd;
-
-    padding-bottom: 5px;
-
-    margin-bottom: 15px;
-
+    border-bottom: 1px solid #ccc;
 }
-
 
 .c img {
-
     max-width: 100%;
-
     height: auto;
-
-    border: 5px solid #9aa9bd;
-
-    border-radius: 10px;
-
-    padding: 4px;
-
-    box-sizing: border-box;
-
 }
-
 
 .c > img {
-
     float: right;
-
-    margin-left: 20px;
-
-    margin-bottom: 15px;
-
 }
 
-
-.c img.argentina {
-
-    border: 6px solid #75aadb;
-
+/* pie de página */
+.d {
+    grid-area: d;
     background-color: white;
-
-    box-shadow: 0 0 0 3px #f6c945;
-
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.argentina-titulo {
+.d ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
 
-    border-bottom-color: #75aadb !important;
+.d a,
+.b a {
+    color: #245b91;
+    text-decoration: none;
+}
 
+/* modo oscuro */
+body.oscuro {
+    background-color: #202124;
+    color: #eee;
+}
+
+body.oscuro .a,
+body.oscuro .b,
+body.oscuro .c,
+body.oscuro .d {
+    background-color: #303134;
+    color: #eee;
+    border-color: #555;
+}
+
+body.oscuro a {
+    color: #8ab4f8;
 }

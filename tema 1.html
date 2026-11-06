@@ -7,6 +7,7 @@
     <title>Benja Wiki - Lionel Messi</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="icon" type="image/png" href="imagen/benjawiki.png">
+    <script src="JS/main.js" defer></script>
 </head>
 
 <body>
@@ -19,14 +20,21 @@
         </header>
 
         <aside class="b">
+
             <h2>Índice</h2>
 
-            <ul>
-                <li><a href="#origen">Origen y formación</a></li>
-                <li><a href="#trayectoria">Trayectoria</a></li>
-                <li><a href="#estilo">Estilo de juego</a></li>
-                <li><a href="#referencias">Referencias</a></li>
-            </ul>
+            <ul id="indice"></ul>
+
+            <h2>Apariencia</h2>
+
+            <button id="modo-oscuro" type="button">Modo oscuro</button>
+
+            <div class="botones-texto">
+                <button id="pequeno" type="button">Pequeño</button>
+                <button id="estandar" type="button">Estándar</button>
+                <button id="grande" type="button">Grande</button>
+            </div>
+
         </aside>
 
         <main class="c">
@@ -35,16 +43,17 @@
 
             <img src="imagen/mesi.jpg" alt="Lionel Messi" width="300">
 
-            <h2>Datos rápidos</h2>
+            <section>
+                <h2 id="datos">Datos rápidos</h2>
 
-            <p><strong>Nombre:</strong> Lionel Andrés Messi</p>
-            <p><strong>Nacimiento:</strong> 24 de junio de 1987</p>
-            <p><strong>Lugar:</strong> Rosario, Santa Fe, Argentina</p>
-            <p><strong>Posición:</strong> Delantero</p>
+                <p><strong>Nombre:</strong> Lionel Andrés Messi</p>
+                <p><strong>Nacimiento:</strong> 24 de junio de 1987</p>
+                <p><strong>Lugar:</strong> Rosario, Santa Fe, Argentina</p>
+                <p><strong>Posición:</strong> Delantero</p>
+            </section>
 
-            <section id="origen">
-
-                <h2>Origen y formación</h2>
+            <section>
+                <h2 id="origen">Origen y formación</h2>
 
                 <p>
                     Lionel Andrés Messi nació el 24 de junio de 1987 en el Hospital Italiano Garibaldi de la ciudad de Rosario, en la provincia de Santa Fe. Es el tercer hijo de Jorge Horacio Messi y Celia María Cuccittini. Tiene dos hermanos mayores, Rodrigo y Matías, y una hermana menor, María Sol.
@@ -57,12 +66,10 @@
                 <p>
                     En 1999, quiso ficharlo el equipo italiano Como, pero finalmente no lo hizo por las dificultades que representaba la mudanza de la familia. Al año siguiente, dio su primera entrevista a un medio de comunicación en el suplemento "Pasión Rojinegra" del diario La Capital de Rosario.
                 </p>
-
             </section>
 
-            <section id="trayectoria">
-
-                <h2>Trayectoria</h2>
+            <section>
+                <h2 id="trayectoria">Trayectoria</h2>
 
                 <p>
                     FC Barcelona: Comenzó la pretemporada 2004-2005 jugando amistosos con el primer equipo. Contra el Palamós el 20 de julio en el Camp Nou anotó su primer gol.
@@ -87,12 +94,10 @@
                 <p>
                     En un partido de La Liga contra el Albacete Balompié el 1 de mayo de 2005, Messi anotó su primer gol oficial.
                 </p>
-
             </section>
 
-            <section id="estilo">
-
-                <h2>Estilo de juego</h2>
+            <section>
+                <h2 id="estilo">Estilo de juego</h2>
 
                 <p>
                     Goleador prolífico, Messi es conocido por su remate, posicionamiento, reacciones rápidas y habilidad para hacer corridas para vencer las líneas defensivas rivales.
@@ -113,7 +118,28 @@
                 <p>
                     Debido a su habilidad con la pelota y baja estatura, es muy ágil para cambiar rápido de dirección y evadir a sus rivales.
                 </p>
+            </section>
 
+            <section>
+                <h2 id="discusion">Discusión</h2>
+
+                <form id="formulario-comentarios">
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" maxlength="200"></textarea>
+
+                    <p id="contador">0 / 200</p>
+
+                    <button type="submit">Enviar comentario</button>
+
+                </form>
+
+                <p id="mensaje"></p>
+
+                <ul id="lista-comentarios"></ul>
             </section>
 
         </main>

@@ -7,6 +7,7 @@
     <title>Benja Wiki - Argentina</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="icon" type="image/png" href="imagen/benjawiki.png">
+    <script src="JS/main.js" defer></script>
 </head>
 
 <body>
@@ -22,12 +23,17 @@
 
             <h2>Índice</h2>
 
-            <ul>
-                <li><a href="#introduccion">Introducción</a></li>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#mundiales">Mundiales</a></li>
-                <li><a href="#referencias">Referencias</a></li>
-            </ul>
+            <ul id="indice"></ul>
+
+            <h2>Apariencia</h2>
+
+            <button id="modo-oscuro" type="button">Modo oscuro</button>
+
+            <div class="botones-texto">
+                <button id="pequeno" type="button">Pequeño</button>
+                <button id="estandar" type="button">Estándar</button>
+                <button id="grande" type="button">Grande</button>
+            </div>
 
         </aside>
 
@@ -37,16 +43,17 @@
 
             <img src="imagen/descarga.png" alt="Selección Argentina" width="350">
 
-            <h2>Datos rápidos</h2>
+            <section>
+                <h2 id="datos">Datos rápidos</h2>
 
-            <p><strong>Nombre:</strong> Selección Argentina de fútbol</p>
-            <p><strong>Asociación:</strong> Asociación del Fútbol Argentino (AFA)</p>
-            <p><strong>Confederación:</strong> CONMEBOL</p>
-            <p><strong>Primer partido:</strong> 20 de julio de 1902</p>
+                <p><strong>Nombre:</strong> Selección Argentina de fútbol</p>
+                <p><strong>Asociación:</strong> Asociación del Fútbol Argentino (AFA)</p>
+                <p><strong>Confederación:</strong> CONMEBOL</p>
+                <p><strong>Primer partido:</strong> 20 de julio de 1902</p>
+            </section>
 
-            <section id="introduccion">
-
-                <h2>Introducción</h2>
+            <section>
+                <h2 id="introduccion">Introducción</h2>
 
                 <p>
                     La selección masculina de fútbol de Argentina es el equipo formado por jugadores de nacionalidad argentina que representa a la Asociación del Fútbol Argentino (AFA) en las competiciones oficiales organizadas por la Confederación Sudamericana de Fútbol (Conmebol) y por la Federación Internacional de Fútbol Asociación (FIFA).
@@ -67,12 +74,10 @@
                 <p>
                     Es considerada como una de las grandes potencias del fútbol masculino internacional y una de las selecciones más importantes de la historia.
                 </p>
-
             </section>
 
-            <section id="historia">
-
-                <h2>Historia</h2>
+            <section>
+                <h2 id="historia">Historia</h2>
 
                 <p>
                     El 20 de julio de 1902 disputó su primer partido oficial ante Uruguay, en Montevideo, con triunfo 6-0. En Buenos Aires jugó por primera vez el 13 de septiembre de 1903 ante el mismo rival, y perdió 2-3.
@@ -97,12 +102,10 @@
                 <p>
                     En los años siguientes, Argentina disputaba partidos solamente contra equipos sudamericanos.
                 </p>
-
             </section>
 
-            <section id="mundiales">
-
-                <h2>Mundiales</h2>
+            <section>
+                <h2 id="mundiales">Mundiales</h2>
 
                 <p>
                     La selección argentina ha participado en numerosas ediciones de la Copa Mundial de la FIFA y es una de las selecciones más importantes de la competición.
@@ -113,7 +116,28 @@
                 </p>
 
                 <img src="imagen/mundiales.png" alt="Mundiales de Argentina" width="700">
+            </section>
 
+            <section>
+                <h2 id="discusion">Discusión</h2>
+
+                <form id="formulario-comentarios">
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" maxlength="200"></textarea>
+
+                    <p id="contador">0 / 200</p>
+
+                    <button type="submit">Enviar comentario</button>
+
+                </form>
+
+                <p id="mensaje"></p>
+
+                <ul id="lista-comentarios"></ul>
             </section>
 
         </main>
