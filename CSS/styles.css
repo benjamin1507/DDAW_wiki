@@ -158,11 +158,16 @@ body.oscuro a {
     color: #A23B2C;
 }
 
-/* comentarios publicados */
-#lista-comentarios li {
-    margin-bottom: 10px;
+/* mejorar la visibilidad del mensaje en modo oscuro */
+body.oscuro #mensaje {
+    color: #ff8a80;
 }
 
-.plegado .contenido-seccion {
-    display: none;
+/* comentarios publicados */
+#lista-comentarios {
+    list-style: none;
+}
+
+#lista-comentarios li {
+    margin-bottom: 10px;
 }

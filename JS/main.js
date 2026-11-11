@@ -76,6 +76,7 @@ botonGrande.addEventListener("click", function() {
     botonGrande.classList.add("activo");
 });
 
+
 /* plegar y desplegar las secciones del artículo */
 const secciones = document.querySelectorAll("main section");
 
@@ -98,18 +99,23 @@ secciones.forEach(function(seccion) {
     });
 });
 
+
 /* quitar los errores cuando se corrigen los campos */
 nombre.addEventListener("input", function() {
     if (nombre.value.trim() !== "") {
         nombre.classList.remove("error");
     }
 
-    if (nombre.value.trim() !== "" && comentario.value.trim().length >= 10) {
+    if (nombre.value.trim() !== "" && comentario.value.trim().length >= 10 && comentario.value.length <= 200) {
         mensaje.textContent = "";
     }
 });
 
+
+/* actualizar el contador de caracteres */
 comentario.addEventListener("input", function() {
+    contador.textContent = comentario.value.length + " / 200";
+
     if (comentario.value.trim().length >= 10 && comentario.value.length <= 200) {
         comentario.classList.remove("error");
     }
@@ -170,11 +176,10 @@ formulario.addEventListener("submit", function(e) {
     contador.textContent = "0 / 200";
 });
 
+
 /* eliminar únicamente el comentario seleccionado */
 listaComentarios.addEventListener("click", function(e) {
     if (e.target.classList.contains("borrar")) {
         e.target.parentElement.remove();
     }
 });
-
-
